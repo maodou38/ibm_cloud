@@ -41,7 +41,7 @@ if [ ! -f "./config/v2ray" ]; then
     if [ $? -eq 0 ]; then
         7z x v2ray.zip v2ray v2ctl *.dat
 		#加密
-		gzexe v2ray v2ctl *.dat
+		#gzexe v2ray v2ctl *.dat
         chmod 700 v2ctl v2ray
     else
         echo "${RED}download new version failed!${END}"
