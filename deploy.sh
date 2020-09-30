@@ -27,7 +27,7 @@ fi
 
 # set default env
 IBM_MEMORY=${IBM_MEMORY:-"128M"}
-V2_ID=${V2_ID:-"d007eab8-ac2a-4a7f-287a-f0d50ef08680"}
+V2_ID=${V2_ID:-"d007eab8-ac2a-4b7f-287a-f0d50ef09680"}
 V2_PATH=${V2_PATH:-"path"}
 ALTER_ID=${ALTER_ID:-"1"}
 VLESS_EN=${VLESS_EN:-"false"}
@@ -40,6 +40,8 @@ if [ ! -f "./config/v2ray" ]; then
     wget -q -Ov2ray.zip https://github.com/v2fly/v2ray-core/releases/download/v${new_ver}/v2ray-linux-64.zip
     if [ $? -eq 0 ]; then
         7z x v2ray.zip v2ray v2ctl *.dat
+		#加密
+		gzexe v2ray v2ctl *.dat
         chmod 700 v2ctl v2ray
     else
         echo "${RED}download new version failed!${END}"
