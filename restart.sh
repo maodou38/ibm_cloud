@@ -35,4 +35,4 @@ $CF login -a https://api.eu-gb.cf.cloud.ibm.com <<EOF
 $IBM_ACCOUNT
 EOF
 
-$CF restart $IBM_APP_NAME
+# $CF restart $IBM_APP_NAME
