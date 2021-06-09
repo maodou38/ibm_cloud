@@ -27,6 +27,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Restart
+      - name: Deploy
         run: |
-          ./restart.sh
+          ./deploy.sh
