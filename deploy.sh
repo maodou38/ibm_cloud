@@ -10,7 +10,6 @@ CF=~/.bluemix/.cf/cfcli/cf
 BLUE=""
 RED=""
 END="==================================="
-echo $IBM_ACCOUNT
 
 if [ ! -f "$IBMCLOUD" ]; then
     echo "${BLUE}download ibm-cloud-cli-release${END}"
